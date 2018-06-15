@@ -51,3 +51,10 @@ class W(Q):
         """ generate auto index.
         """
         return self._filter(_model, **kwargs).count() + 1
+
+
+
+
+
+
+

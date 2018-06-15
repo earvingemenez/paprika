@@ -1,6 +1,6 @@
 from rest_framework import parsers, renderers
 from rest_framework.authtoken.models import Token
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.viewsets import ViewSet
@@ -12,8 +12,8 @@ from .serializers import AuthTokenSerializer, AuthSerializer, UserSerializer
 class Login(APIView):
     """ token authentication
     """
-    throttle_classes = ()
-    permission_classes = ()
+    authentication_classes = ()
+    permission_classes = (AllowAny,)
     parser_classes = (parsers.FormParser, parsers.MultiPartParser, parsers.JSONParser,)
     render_classes = (renderers.JSONRenderer,)
     serializer_class = AuthTokenSerializer
