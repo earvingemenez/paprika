@@ -1,0 +1,10 @@
+*.pyc
+*sqlite3
+*_settings.py
+
+media/
+static/
+assets/fonts/
+assets/images/
+
+
