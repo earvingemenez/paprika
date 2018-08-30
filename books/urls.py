@@ -2,7 +2,7 @@ from django.urls import path, re_path
 from .views import Books, Book, Chapters, Chapter, Pages, Page
 
 BOOKS = ''
-BOOK = f'{BOOKS}<int:id>/'
+BOOK = f'{BOOKS}<str:code>/'
 CHAPTERS = f'{BOOK}chapters/'
 CHAPTER = f'{CHAPTERS}<int:chapter_id>/'
 PAGES = f'{CHAPTER}pages/'
@@ -15,7 +15,7 @@ urlpatterns = [
         'get': 'list',
     }), name="books"),
     path(f'{BOOK}', Book.as_view({
-        'get': 'detail',
+        'get': 'get',
     }), name="book"),
 
     path(f'{CHAPTERS}', Chapters.as_view({

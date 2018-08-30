@@ -82,12 +82,27 @@ class AuthSerializer(serializers.ModelSerializer):
         return password
 
 
+class SubscriberSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = (
+            'id',
+            'email',
+            'first_name',
+            'last_name',
+            'handle',
+            'image',
+        )
+
+
 class UserSerializer(serializers.ModelSerializer):
     """ user serializer
     """
     image = serializers.SerializerMethodField()
+    cover = serializers.SerializerMethodField()
     title = serializers.SerializerMethodField()
     display_name = serializers.SerializerMethodField()
+    subscribers = SubscriberSerializer(many=True, read_only=True)
 
     class Meta:
         model = User
@@ -101,15 +116,12 @@ class UserSerializer(serializers.ModelSerializer):
             'bio',
             'handle',
             'image',
+            'cover',
             'subscribers',
         )
 
     def __init__(self, *args, **kwargs):
         self.request = kwargs.pop('request', None)
-        self.file_upload = kwargs.pop('file_upload', None)
-
-        if kwargs.pop('file_upload', None):
-            self.Meta.fields = ('id', 'image')
 
         return super(UserSerializer, self).__init__(*args, **kwargs)
 
@@ -123,7 +135,30 @@ class UserSerializer(serializers.ModelSerializer):
         return f"{obj.title}".title()
 
     def get_image(self, obj):
+        if not obj.image: return None
         return f"{self.request.META['wsgi.url_scheme']}://{self.request.META['HTTP_HOST']}{obj.image.url}"
 
+    def get_cover(self, obj):
+        if not obj.cover: return None
+        return f"{self.request.META['wsgi.url_scheme']}://{self.request.META['HTTP_HOST']}{obj.cover.url}"
+
     def get_display_name(self, obj):
-        return obj.get_display_name()
+        return obj.get_display_name
+
+
+class PhotoSerializer(serializers.ModelSerializer):
+    """ profile photo serializer
+    """
+    class Meta:
+        model = User
+        fields = ('id', 'image')
+
+
+class CoverSerializer(serializers.ModelSerializer):
+    """ profile photo serializer
+    """
+    class Meta:
+        model = User
+        fields = ('id', 'cover')
+
+

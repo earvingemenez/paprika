@@ -1,16 +1,26 @@
 from django.contrib import admin
-from .models import Book, Chapter, Page
+from .models import Book, Chapter, Page, Category, Tag
 
 
 class BookAdmin(admin.ModelAdmin):
+
+    def tagged(self, obj):
+        return ", ".join(obj.tags.all().values_list('name', flat=True))
+
     model = Book
-    list_display =  (
+    list_display = (
         'title',
         'author',
+        'code',
+        'price',
+        'category',
+        'tagged',
         'date_created',
         'date_updated',
         'status',
     )
+    readonly_fields = ('code',)
+    filter_horizontal = ('tags',)
 
 
 class ChapterAdmin(admin.ModelAdmin):
@@ -34,7 +44,16 @@ class PageAdmin(admin.ModelAdmin):
     )
 
 
+class TagAdmin(admin.ModelAdmin):
+    model = Tag
+
+
+class CategoryAdmin(admin.ModelAdmin):
+    model = Category
+
 
 admin.site.register(Book, BookAdmin)
 admin.site.register(Chapter, ChapterAdmin)
 admin.site.register(Page, PageAdmin)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Tag, TagAdmin)

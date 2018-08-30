@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404
+from users.models import User
 
 
 class Q(object):
@@ -31,6 +32,12 @@ class W(Q):
     """
     def __init__(self, *args, **kwargs):
         return super(Q, self).__init__(*args, **kwargs)
+
+    def generate_code(self):
+        """ generate a random unique 8 length character
+            which will serve as the book's identifier
+        """
+        return User.objects.make_random_password(length=8)
 
     def generate_title(self, _model, _format="UNTITLED-", **kwargs):
         """ generate an untitled name with the index

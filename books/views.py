@@ -19,7 +19,7 @@ class Books(Q, ViewSet):
 
     def list(self, *args, **kwargs):
         serializer = self.serializer_class(
-            self._filter(self._model, **self.request.query_params), many=True)
+            self._filter(self._model, **self.request.query_params.dict()), many=True)
 
         return Response(serializer.data, status=200)
 
@@ -29,8 +29,9 @@ class Book(Q, ViewSet):
     """
     serializer_class = BookSerializer
 
-    def detail(self, *args, **kwargs):
+    def get(self, *args, **kwargs):
         serializer = self.serializer_class(self._get(self._model, **kwargs))
+        
         return Response(serializer.data, status=200)
 
     def update(self, *args, **kwargs):
@@ -96,7 +97,7 @@ class Pages(Q, ViewSet):
 
     def list(self, *args, **kwargs):
         serializer = self.serializer_class(
-            self._filter(self._model, **self.request.query_params), many=True)
+            self._filter(self._model, chapter__id=kwargs['chapter_id'], **self.request.query_params), many=True)
 
         return Response(serializer.data, status=200)
 

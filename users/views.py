@@ -6,7 +6,13 @@ from rest_framework.views import APIView
 from rest_framework.viewsets import ViewSet
 
 from utils.mixins import Q
-from .serializers import AuthTokenSerializer, AuthSerializer, UserSerializer
+from .serializers import (
+    AuthTokenSerializer,
+    AuthSerializer,
+    UserSerializer,
+    PhotoSerializer,
+    CoverSerializer,
+)
 
 
 class Login(APIView):
@@ -62,12 +68,30 @@ class User(Q, ViewSet):
 
         return Response(serializer.data, status=200)
 
+    def auth(self, *args, **kwargs):
+        return Response(self.serializer_class(
+            instance=self.request.user,
+            request=self.request).data, status=200)
+
     def upload_avatar(self, *args, **kwargs):
-        serializer = self.serializer_class(data=self.request.data,
-                                           instance=self._get(self._model, id=kwargs.get('id')),
-                                           request=self.request,
-                                           file_upload=True)
+        serializer = PhotoSerializer(data=self.request.data,
+                                     instance=self._get(self._model, id=kwargs.get('id')))
         serializer.is_valid(raise_exception=True)
         serializer.save()
 
-        return Response(serializer.data, status=200)
+        return Response(self.serializer_class(
+            serializer.instance, request=self.request).data, status=200)
+
+    def upload_cover(self, *args, **kwargs):
+        serializer = CoverSerializer(data=self.request.data,
+                                     instance=self._get(self._model, id=kwargs.get('id')))
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+
+        return Response(self.serializer_class(
+            serializer.instance, request=self.request).data, status=200)
+
+
+
+
+
