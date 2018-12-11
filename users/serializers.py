@@ -136,11 +136,11 @@ class UserSerializer(serializers.ModelSerializer):
 
     def get_image(self, obj):
         if not obj.image: return None
-        return f"{self.request.META['wsgi.url_scheme']}://{self.request.META['HTTP_HOST']}{obj.image.url}"
+        return f"{obj.image.url}"
 
     def get_cover(self, obj):
         if not obj.cover: return None
-        return f"{self.request.META['wsgi.url_scheme']}://{self.request.META['HTTP_HOST']}{obj.cover.url}"
+        return f"{obj.cover.url}"
 
     def get_display_name(self, obj):
         return obj.get_display_name

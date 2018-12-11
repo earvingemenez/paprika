@@ -36,8 +36,11 @@ class Book(W, models.Model):
     price = models.DecimalField(max_digits=999, decimal_places=2, default=0.00)
     rating = models.PositiveIntegerField(default=0)
 
+    is_featured = models.BooleanField(default=False)
+
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
+    date_published = models.DateTimeField(null=True)
 
     def __str__(self):
         return f"{self.title}"
@@ -129,8 +132,28 @@ class Category(models.Model):
     """
     name = models.CharField(max_length=100)
 
+    class Meta:
+        verbose_name_plural = "Categories"
+
     def __str__(self):
         return f"{self.name}"
+
+
+class Read(models.Model):
+    """ user reading activity
+    """
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
+    book = models.ForeignKey('Book', on_delete=models.SET_NULL, null=True)
+    page = models.ForeignKey('Page', on_delete=models.SET_NULL, null=True)
+
+    date_created = models.DateTimeField(auto_now_add=True)
+    date_updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name_plural = "Read (history)"
+
+    def __str__(self):
+        return f"({self.user}) {self.book}"
 
 
 # SIGNALS

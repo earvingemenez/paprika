@@ -1,5 +1,5 @@
 from django.urls import path, re_path
-from .views import Books, Book, Chapters, Chapter, Pages, Page
+from .views import Books, Book, Chapters, Chapter, Pages, Page, Reads
 
 BOOKS = ''
 BOOK = f'{BOOKS}<str:code>/'
@@ -14,10 +14,19 @@ urlpatterns = [
         'post': 'create',
         'get': 'list',
     }), name="books"),
-    path(f'{BOOK}', Book.as_view({
-        'get': 'get',
-    }), name="book"),
 
+    path(f'{BOOKS}featured/', Books.as_view({
+        'get': 'featured',
+    }), name="books_featured"),
+
+    path(f'{BOOKS}releases/', Books.as_view({
+        'get': 'new_releases',
+    }), name="books_releases"),
+
+    path(f'{BOOKS}reads/', Reads.as_view({
+        'get': 'reads'
+    }), name="books_reads"),
+    
     path(f'{CHAPTERS}', Chapters.as_view({
         'post': 'create',
         'get': 'list',
@@ -35,4 +44,8 @@ urlpatterns = [
         'get': 'detail',
         'post': 'updated',
     }), name="pages"),
+
+    path(f'{BOOK}', Book.as_view({
+        'get': 'get',
+    }), name="book"),
 ]

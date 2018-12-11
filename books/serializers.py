@@ -1,7 +1,9 @@
 from rest_framework import serializers
 
-from utils.mixins import Q
-from .models import Book, Chapter, Page, Category, Tag
+from users.serializers import UserSerializer
+from utils.mixins import Q, DT
+
+from .models import Book, Chapter, Page, Category, Tag, Read
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -25,6 +27,7 @@ class BookSerializer(serializers.ModelSerializer):
     """
     category = CategorySerializer()
     tags = TagSerializer(many=True)
+    author = UserSerializer()
 
     class Meta:
         model = Book
@@ -57,3 +60,22 @@ class PageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Page
         fields = ('id', 'content', 'chapter', 'page_number')
+
+
+class ReadSerializer(DT, serializers.ModelSerializer):
+    """ read serializer
+    """
+    book = BookSerializer()
+    page = PageSerializer()
+    timeago = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Read
+        fields = ('id', 'book', 'page', 'date_updated', 'timeago')
+
+    def get_timeago(self, obj):
+        return f"{self.time_ago(obj.date_updated)}"
+
+
+
+

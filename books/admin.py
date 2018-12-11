@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Book, Chapter, Page, Category, Tag
+from .models import Book, Chapter, Page, Category, Tag, Read
 
 
 class BookAdmin(admin.ModelAdmin):
@@ -52,8 +52,21 @@ class CategoryAdmin(admin.ModelAdmin):
     model = Category
 
 
+class ReadAdmin(admin.ModelAdmin):
+    model = Read
+    list_display = (
+        'book',
+        'page',
+        'user',
+        'date_updated',
+        'date_created'
+    )
+
+
 admin.site.register(Book, BookAdmin)
 admin.site.register(Chapter, ChapterAdmin)
 admin.site.register(Page, PageAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Tag, TagAdmin)
+
+admin.site.register(Read, ReadAdmin)

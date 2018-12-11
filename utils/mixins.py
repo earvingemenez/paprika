@@ -1,4 +1,10 @@
+import timeago
+import datetime
+
+from django.conf import settings
 from django.shortcuts import get_object_or_404
+from django.utils import timezone
+
 from users.models import User
 
 
@@ -58,6 +64,29 @@ class W(Q):
         """ generate auto index.
         """
         return self._filter(_model, **kwargs).count() + 1
+
+
+class DT(object):
+    """ helper class used for managing time and dates
+    """
+    def __init__(self, *args, **kwargs):
+        return super(DT, self).__init__(*args, **kwargs)
+
+    def time_ago(self, dt):
+        """ get the time interval of the specified datetime
+            and the current datetime. It also automatically
+            formats it to minutes, hrs, days, years.
+        """
+        return timeago.format(dt, timezone.now())
+
+    def days_ago(self, dt, days=1):
+        """ get the past datetime based on the number of
+            days specified.
+        """
+        return dt - datetime.timedelta(days=days)
+
+
+
 
 
 

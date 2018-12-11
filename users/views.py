@@ -25,8 +25,15 @@ class Login(APIView):
     serializer_class = AuthTokenSerializer
 
     def post(self, *args, **kwargs):
-        serializer = self.serializer_class(data=self.request.data,
-                                           context={'request': self.request})
+        """ accepts post data that serves as user credentials and
+            validates it. Returns a generated token if the
+            credentials are valid.
+        """
+        serializer = self.serializer_class(
+            data=self.request.data,
+            context={'request': self.request}
+        )
+        
         serializer.is_valid(raise_exception=True)
         return Response({
             'token'   : serializer.get_token().key,
@@ -53,9 +60,9 @@ class User(Q, ViewSet):
     serializer_class = UserSerializer
     permission_classes = (IsAuthenticated,)
 
-    def detail(self, *args, **kwargs):
+    def get(self, *args, **kwargs):
         serializer = self.serializer_class(
-            instance=self._get(self._model, id=kwargs.get('id')),
+            instance=self._get(self._model, handle=kwargs.get('handle')),
             request=self.request)
         return Response(serializer.data, status=200)
 

@@ -1,0 +1,24 @@
+.navbar {
+
+  &-nav {
+    align-items: center;
+
+    .nav-item {
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .dropdown {
+
+        &-menu {
+          position: absolute;
+        }
+
+      }
+    }
+
+  }
+
+}
