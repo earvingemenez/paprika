@@ -23,11 +23,14 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/swiper/dist/css/swiper.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/bootstrap/dist/css/bootstrap-reboot.min.css",
               "src/assets/css/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/swiper/dist/js/swiper.min.js"
+            ]
           },
           "configurations": {
             "production": {

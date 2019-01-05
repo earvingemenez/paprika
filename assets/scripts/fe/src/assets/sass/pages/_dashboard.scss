@@ -1,0 +1,67 @@
+.main-body-container {
+    padding: $m36;
+}
+
+.main-dashboard-container {
+    @include flexbox();
+    @include align-items(start);
+    padding: $m36;
+
+    .book-listing {
+
+        width: 100%;
+
+        .featured-book {
+            width: 100%;
+             box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.16);
+             margin-bottom: torem(70);
+
+            .bg-banner {
+                @include bg-img-cover();
+                height: #{354 / $basefont}rem;
+                width: 100%;
+                padding: 3.125rem;
+                @include flexbox();
+                @include align-items(flex-end);
+            }
+        }
+    }
+
+    .newsfeed {
+    	max-height: 250vh;
+    	overflow-y: auto;
+        .news-item {
+            .card {
+
+                p{
+                    color: $default;
+                    line-height: 1.71;
+                }
+                &-caption{
+                    color: $black !important;
+                    font-family: $sf-ui-display-medium;
+                }
+                &-image{
+                    margin-bottom: $m32;
+
+                }
+                
+                .social-link{
+                   a{
+                    font-family: $sf-ui-display-semibold;
+                    span{
+                        font-family: $SF-UI-Display-Regular;
+                    }
+                } 
+                }
+            }
+        }
+
+    }
+
+}
+.left-tab-container{
+    border-left:$pale-grey-two solid 1px;
+    padding-left:torem(36 * 2);
+    
+}

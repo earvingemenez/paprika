@@ -1,0 +1,13 @@
+ .book-shadowed {
+     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+ }
+
+ .card-shadow {
+     @include box-shadow(0px, 3px, 30px, 0px, rgba(92, 102, 128, 0.16));
+     background: $white;
+     border-radius: 8px;
+ }
+
+ .card {
+     border: none;
+ }

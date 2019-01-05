@@ -1,0 +1,26 @@
+//overriding bootstrap theme colors
+$theme-colors: (
+  "primary": #00807c,
+  "danger": #ff4136
+);
+
+//disabling default bootstrap box shadows 
+
+$enable-shadows: false;
+
+
+//overriding bs dropdowns
+.dropdown {
+    .dropdown-toggle {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+
+//overriding bs nav-tabs
+
+.nav-tabs{
+	
+}
