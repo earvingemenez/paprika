@@ -1,0 +1,144 @@
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+    moz-osx-font-smoothing: grayscale;
+    font: normal normal 14px/150% $SF-UI-Display-Regular, 'Helvetica', sans-serif;
+    color: $dark-grey;
+    *{
+        &:focus{
+            box-shadow:none !important;
+
+        }
+    }
+}
+
+//typography
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    line-height: 1.5;
+}
+h1,
+.h1 {
+    font-size: $h1;
+}
+
+h2,
+.h2 {
+    font-size: $h2;
+}
+
+h3,
+.h3 {
+    font-size: $h3;
+}
+
+h4,
+.h4 {
+    font-size: $h4;
+}
+
+h5,
+.h5 {
+    font-size: $h5;
+}
+
+h6,
+.h6 {
+    font-size: $h6;
+}
+
+.p-md{
+    font-size: $p-md;
+}
+p {
+    font-size: 1rem;
+    letter-spacing: 0.003rem;
+    line-height: 1.6;
+}
+
+label {
+    font-size: 1rem;
+}
+
+small {
+    font-size: 0.85rem;
+}
+
+a {
+    text-decoration: none;
+    color: $dark-grey;
+    font-size: 1rem;
+
+    &:hover {
+        text-decoration: none;
+
+    }
+
+    &.link-icon {
+        img {
+            width: 35px;
+        }
+    }
+}
+
+//buttons
+
+button{
+    font-family: $sf-ui-display-semibold;
+}
+
+//font wieghts
+
+.text-bld {
+    font-family:$sf-ui-display-bold;
+}
+
+.text-smb {
+    font-family: $sf-ui-display-semibold;
+}
+
+//text colors
+
+.text-grey {
+    color:$light-grey;
+}
+.text-default{
+    color: $default;
+}
+
+.text-white {
+    color: $white;
+}
+
+//images
+
+.bg-img {
+    @include bg-img-cover;
+}
+
+
+//padding all side
+
+.pxlg{
+    padding:$m36;
+}
+.plg{
+    padding:$m32;
+}
+.pmd{
+    padding:$m24;
+}
+
+//padding-left
+.pl-xlg{
+    padding-left: $m36;
+}
+
+.pl-sm{
+    padding-left:$m16;
+}
+
+
+//padding-right
+.pr-xlg{
+    padding-right: $m36;
+}

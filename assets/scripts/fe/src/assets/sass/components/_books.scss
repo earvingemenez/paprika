@@ -1,0 +1,108 @@
+.book-thumbnail {
+
+
+    .genre {
+        font-size: $small;
+        color: $maize;
+        border: 1px solid $maize;
+        letter-spacing: 0.4px;
+        text-align: left;
+        border-radius: 6px;
+        padding: 0.5rem;
+        line-height: 1;
+        margin-right: 0.5rem;
+    }
+
+    .author {
+        color: $light-grey;
+        margin-bottom: 2rem;
+    }
+
+    .price {
+       color: $dark-grey;
+    }
+
+    .rating {
+        font-size: 10px;
+        color: darken($pale-grey, 10%);
+    }
+
+
+    .img-cover {
+        width: 100%;
+        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.16);
+
+        &-md {
+            @extend .img-cover;
+            max-width: torem(222);
+            height: torem(332);
+
+        }
+        &-sm {
+            @extend .img-cover;
+            max-width: torem(160);
+            height: torem(240);
+
+        }
+
+        &-xs {
+            @extend .img-cover;
+            max-width: torem(110);
+            height: torem(172);
+        }
+        &-md__landscape{
+            max-width: torem(300);
+            height: torem(200);
+        }
+    }
+
+
+    &.thumbnail-grid {
+        .book-details {
+            padding-left: $m24;
+
+        }
+
+        @include flexbox();
+        width: 100%;
+        flex: 1;
+
+        &.book-sm {
+            max-width: 29.5rem;
+
+            h5 {
+                font-family: $sf-ui-display-semibold;
+            }
+
+            p {
+                margin-bottom: 0.55rem;
+            }
+
+
+
+            .progress-bar {
+                max-width: torem(108);
+                height: 1.42rem;
+                margin-bottom: 0.5rem;
+
+                span {
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+
+    }
+
+    .thumbnail-stacked {
+        .book-details {
+            padding-left: 0;
+        }
+    }
+}
+
+.book-title {
+    font-family: $BaskervilleBoldBT;
+    line-height: 1.25;
+    font-size: $h6;
+}

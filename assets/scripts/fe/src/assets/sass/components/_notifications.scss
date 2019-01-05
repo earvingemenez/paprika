@@ -1,0 +1,17 @@
+.notif {
+    &-nav {
+        width: 17px;
+        height: 17px;
+        background: $sky-blue;
+        padding: 0.5rem;
+        border-radius: 50%;
+        font-size: 12px;
+    color: #fff;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+    }
+}

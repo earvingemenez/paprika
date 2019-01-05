@@ -1,0 +1,13 @@
+#recentRead{
+	.swiper-slide{
+		max-width: 29.5rem;
+	}
+}
+#recentRelease{
+	.swiper-slide{
+		max-width: torem(490);
+		.book-thumbnail{
+			height: torem(312);
+		}
+	}
+}

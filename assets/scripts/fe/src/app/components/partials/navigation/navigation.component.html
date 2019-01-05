@@ -1,36 +1,66 @@
-<nav class="navbar navbar-light bg-light">
+<div class="pxlg">
+    <div class="nav-wrapper">
+        <nav class="navbar navbar-expand-lg justify-content-between" id="mainNav">
+            <a href="#" class="navbar-brand">
+                <img src="/static/images/logo.png"
+                     srcset="/static/images/logo@2x.png 2x,
+                             /static/images/logo@3x.png 3x"
+                     class="logo">
+            </a>
+            <ul class="navbar-nav nav align-items-center mr-auto">
+                <li class="nav-item">
+                    <a href="" class="nav-link notif"><span>Explore</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link notif"><span>Market</span></a>
+                </li>
+                <li class="nav-item">
+                     <div class="search-bar">
+                        <input type="text" name="" class="form-control" placeholder="Search for books, authors and etc.">
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav nav align-items-center">
+                <li class="nav-item dropdown">
+                    <a href="" class="btn btn-cta">Create a book</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link notif"><span>My Books</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle" id="notifDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fal fa-bell"></i> 
 
-  <ul class="navbar-nav flex-row">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Explore</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Market</a>
-    </li>
-  </ul>
-
-  <a class="navbar-brand" href="#">Basaha</a>
-
-  <ul class="navbar-nav flex-row">
-    <li class="nav-item">
-      <a class="nav-link" prevdefault href=""><i class="fal fa-bell"></i></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" prevdefault href=""><i class="fal fa-inbox"></i></a>
-    </li>
-    <li class="nav-item">
-      <div ngbDropdown>
-        <a ngbDropdownToggle prevdefault href="">{{ auth.user.first_name }}</a>
-        <div ngbDropdownMenu>
-          <a uiSref="profile" [uiParams]="{'handle': auth.user.handle}" class="dropdown-item">Profile</a>
-          <a href="#" prevdefault class="dropdown-item">Account Settings</a>
-          <a uiSref="signout" class="dropdown-item">Sign Out</a>
-        </div>
-      </div>
-    </li>
-  </ul>
-
-</nav>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="">Notif</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle" id="inboxDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fal fa-inbox"></i>
+                        <span class="notif-nav">1</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="" class="">Message
+                            
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown account-opt">
+                    <a href="" class="nav-link dropdown-toggle d-flex align-items-center" id="accountOpt" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="avatar-xs" style="background-image: url('assets/images/user.jpg');">
+                        </div>
+                        <span class="mr-1">{{ auth.user.first_name }}</span>
+                        <i class="fal fa-angle-down"></i>   
+                    </a>
+                    <div class="dropdown-menu" aria-labelled="accountOpt">
+                        <a href="">
+                            Profile
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

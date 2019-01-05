@@ -1,106 +1,515 @@
-<main class="container-fluid mt-4">
+<div class="pl-xlg pr-xlg">
+    <div class="main-dashboard-container container-fluid">
+        <div class="row">
+            <section class="book-listing col-md-8 pr-xlg">
+                <h5 class="section-title">Editor’s pick</h5>
+                <section class="featured-book">
+                    <div class="bg-banner" style="background-image:url('/static/images/01.jpg');" data-rjs="3">
+                        
+                    </div>
+                </section>
+                <section class="mb-5">
+                    <p class="section-label">Continue Reading</p>
+                    <div class="swiper-container rtl" [swiper]="config" [(index)]="index" id="recentRead">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="book-thumbnail thumbnail-grid book-sm">
+                                    <div class="bg-img-cover img-cover-xs" style="background-image: url('/static/images/02-color-song.jpg');" data-rjs="3">
+                                    </div>
+                                    <div class="book-details">
+                                        <h6 class="book-title">Color Song</h6>
+                                        <p class="author">by J. K. Rowling</p>
+                                        <p>Last opened: 3 days ago</p>
+                                        <div class="progress-bar">
+                                            <div class="meter">
+                                                <div class=" progress">
+                                                    
+                                                </div>
+                                            </div>
+                                            <span class="percentage">70%</span>
+                                        </div>
+                                        <button class="btn-sm btn-light">Continue reading</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="book-thumbnail thumbnail-grid book-sm">
+                                    <div class="bg-img-cover img-cover-xs" style="background-image: url('/static/images/19.jpg');" data-rjs="3">
+                                    </div>
+                                    <div class="book-details">
+                                        <h6 class="book-title">The pixel aracde</h6>
+                                        <p class="author">by John Hopkins</p>
+                                        <p>Last opened: 3 days ago</p>
+                                        <div class="progress-bar">
+                                            <div class="meter">
+                                                <div class=" progress">
+                                                    
+                                                </div>
+                                            </div>
+                                            <span class="percentage">70%</span>
+                                        </div>
+                                        <button class="btn-sm btn-light">Continue reading</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="pt-5">
+                    <h5 class="section-title">New Releases</h5>
+                    <div class="swiper-container rtl" [swiper]="config" [(index)]="index" id="recentRelease">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="book-thumbnail thumbnail-grid book-lg card-shadow">
+                                    <div class="bg-img-cover img-cover-sm mb-3" style="background-image: url('/static/images/hp-1.jpg');" data-rjs="3">
+                                    </div>
+                                    <div class="book-details">
+                                         <h6 class="book-title mb-3">Harry Potter and the Philosopher’s stone</h6>
+                                            
+                                        <p class="text-grey">by J. K. Rowling</p>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                                        <div class="d-flex align-items-start">
+                                            <div class="rating mr-2 mb-2">
+                                                <span class="fas fa-star"></span>
+                                                <span class="fas fa-star"></span>
+                                                <span class="fas fa-star"></span>
+                                                <span class="fas fa-star"></span>
+                                                <span class="fas fa-star"></span>
+                                            </div>
+                                            <a href="">Write a review</a>
+                                        </div>
+                                        <span class="price mb-2">$1.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="book-thumbnail thumbnail-grid book-lg card-shadow">
+                                    <div class="bg-img-cover img-cover-sm mb-3" style="background-image: url('/static/images/02.jpg');" data-rjs="3">
+                                    </div>
+                                    <div class="book-details">
+                                         <h6 class="book-title mb-3">Harry Potter and the Philosopher’s stone</h6>
+                                            
+                                        <p class="text-grey">by J. K. Rowling</p>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                                        <div class="d-flex align-items-start">
+                                            <div class="rating mr-2 mb-2">
+                                                <span class="fas fa-star"></span>
+                                                <span class="fas fa-star"></span>
+                                                <span class="fas fa-star"></span>
+                                                <span class="fas fa-star"></span>
+                                                <span class="fas fa-star"></span>
+                                            </div>
+                                            <a href="">Write a review</a>
+                                        </div>
+                                        <span class="price mb-2">$1.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="book-thumbnail thumbnail-grid book-lg card-shadow">
+                                    <div class="bg-img-cover img-cover-sm mb-3" style="background-image: url('/static/images/ebook.jpg');" data-rjs="3">
+                                    </div>
+                                    <div class="book-details">
+                                         <h6 class="book-title mb-3">Harry Potter and the Philosopher’s stone</h6>
+                                            
+                                        <p class="text-grey">by J. K. Rowling</p>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                                        <div class="d-flex align-items-start">
+                                            <div class="rating mr-2 mb-2">
+                                                <span class="fas fa-star"></span>
+                                                <span class="fas fa-star"></span>
+                                                <span class="fas fa-star"></span>
+                                                <span class="fas fa-star"></span>
+                                                <span class="fas fa-star"></span>
+                                            </div>
+                                            <a href="">Write a review</a>
+                                        </div>
+                                        <span class="price mb-2">$1.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h5 class="section-title mb-2">Popular</h5>
+                    <div class="container-fluid p-0">
+                        <div class="row mb-2">
+                            <div class="col-md-4">
+                                <div class="book-thumbnail thumbnail-stacked book-lg mt-4 mb-5">
+                                    <div class="bg-img-cover img-cover-md mb-3" style="background-image: url('/static/images/bourne.jpg');" data-rjs="3">
+                                    </div>
+                                    <div class="book-details">
+                                        <p class="book-title mb-2">The Bourne Identity</p>
+                                        <p class="author mb-0">by Matt Damon</p>
+                                        <div class="rating">
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                        </div>
+                                        
+                                        <p class="text-smb">$1.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="book-thumbnail thumbnail-stacked book-lg mt-4 mb-5">
+                                    <div class="bg-img-cover img-cover-md mb-3" style="background-image: url('/static/images/img-0830.jpg');" data-rjs="3">
+                                    </div>
+                                    <div class="book-details">
+                                        <p class="book-title mb-2">Harry Potter and the Sorcerer’s stone</p>
+                                        <p class="author mb-0">by J. K Rowling</p>
+                                        <div class="rating">
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                        </div>
+                                        
+                                        <p class="text-smb">$1.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="book-thumbnail thumbnail-stacked book-lg mt-4 mb-5">
+                                    <div class="bg-img-cover img-cover-md mb-3" style="background-image: url('/static/images/star-wars.jpg');" data-rjs="3">
+                                    </div>
+                                    <div class="book-details">
+                                        <p class="book-title mb-2">Star Wars Identities</p>
+                                        <p class="author mb-0">by Matt Damon</p>
+                                        <div class="rating">
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                        </div>
+                                        
+                                        <p class="text-smb">$1.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-4">
+                                <div class="book-thumbnail thumbnail-stacked book-lg mt-4 mb-5">
+                                    <div class="bg-img-cover img-cover-md mb-3" style="background-image: url('/static/images/wouldyou.jpg');" data-rjs="3">
+                                    </div>
+                                    <div class="book-details">
+                                        <p class="book-title mb-2">Would You?</p>
+                                        <p class="author mb-0">by Marthe Jocelyn</p>
+                                        <div class="rating">
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                        </div>
+                                        
+                                        <p class="text-smb">$1.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="book-thumbnail thumbnail-stacked book-lg mt-4 mb-5">
+                                    <div class="bg-img-cover img-cover-md mb-3" style="background-image: url('/static/images/image-41.jpg');" data-rjs="3">
+                                    </div>
+                                    <div class="book-details">
+                                        <p class="book-title mb-2">The Brand Gap</p>
+                                        <p class="author mb-0">by Marty Neumeier</p>
+                                        <div class="rating">
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                        </div>
+                                        
+                                        <p class="text-smb">$1.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="book-thumbnail thumbnail-stacked book-lg mt-4 mb-5">
+                                    <div class="bg-img-cover img-cover-md mb-3" style="background-image: url('/static/images/kiss-the-girls.jpg');" data-rjs="3">
+                                    </div>
+                                    <div class="book-details">
+                                        <p class="book-title mb-2">Kiss The Girls</p>
+                                        <p class="author mb-0">by James Patterson</p>
+                                        <div class="rating">
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                        </div>
+                                        
+                                        <p class="text-smb">$1.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="newsfeed col-md-4">
+                <h5 class="section-title">Your Circle</h5>
+                <ul class="list-unstyled news-item">
+                    <li>
+                        <div class="card mb-5 pmd">
+                            <div class="card-byuser d-flex align-items-start justify-content-between">
+                                <div class="d-flex align-items-start">
+                                    <div class="avatar-sm" style="background-image: url('/static/images/user.jpg');"></div>
+                                    <div class="pl-sm">
+                                        <a href="#">Sabrina Carpenter</a>
+                                        <small class="text-grey d-block">3 hours ago</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <a href="" class="mr-4 text-grey">
+                                          <i class="far fa-share-alt"></i>
+                                    </a>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fal fa-ellipsis-v text-grey"></i>
+                                        </a>
+                                        <div class="dropdown-menu">
+                                            <a href="" class="dropdown-item">Edit</a>
+                                            <a href="" class="dropdown-item">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content pt-4">
+                                <div class="card-image">
+                                     <img src="/static/images/post-img-1.jpg" data-rjs="3" class="img-fluid ">
+                                </div>
+                                <p class="card-caption">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
+                                <p>
+                                    Lorem ipsum dolor amet tattooed listicle bitters, gochujang tote bag kale chips humblebrag roof party. 
+                                </p>
+                            </div>
+                            <div class="social-link">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    
+                                    <div class="d-flex">
+                                        <a href="#">
+                                            Comments <span class="text-grey">(55)</span>
+                                        </a>
+                                        
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="multi-avatar">
+                                            <div class="avatar-xxs" style="background-image: url('/static/images/user.jpg');"></div>
+                                            <div class="avatar-xxs" style="background-image: url('/static/images/frank-busch-731193-unsplash.jpg');"></div>
+                                            <div class="avatar-xxs" style="background-image: url('/static/images/ilya-yakover-270303.jpg');"></div>
+                                            <div class="avatar-xxs more-people">+99</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comments">
+                                <div class="write-comment py-4">
+                                    <input type="text" name="" class="form-control" placeholder="Say something...">
+                                </div>
+                                <div class="comment-byuser pmd">
+                                    <div class="card-byuser d-flex align-items-start justify-content-between">
+                                <div class="d-flex align-items-start">
+                                    <div class="avatar-sm" style="background-image: url('/static/images/user.jpg');"></div>
+                                    <div class="pl-sm">
+                                        <a href="#">Sabrina Carpenter</a>
+                                        <small class="text-grey d-block">3 hours ago</small>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fal fa-ellipsis-v text-grey"></i>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a href="" class="dropdown-item">Edit</a>
+                                        <a href="" class="dropdown-item">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content py-3">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no. 
+                                </p>
+                                <a href="">Write a reply</a>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card mb-5 pmd">
+                            <div class="card-byuser d-flex align-items-start justify-content-between">
+                                <div class="d-flex align-items-start">
+                                    <div class="avatar-sm" style="background-image: url('/static/images/user.jpg');"></div>
+                                    <div class="pl-sm">
+                                        <a href="#">Sabrina Carpenter</a>
+                                        <small class="text-grey d-block">3 hours ago</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <a href="" class="mr-4 text-grey">
+                                          <i class="far fa-share-alt"></i>
+                                    </a>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fal fa-ellipsis-v text-grey"></i>
+                                        </a>
+                                        <div class="dropdown-menu">
+                                            <a href="" class="dropdown-item">Edit</a>
+                                            <a href="" class="dropdown-item">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content py-4">
+                                <p>
+                                    Lorem ipsum dolor amet tattooed listicle bitters, gochujang tote bag kale chips humblebrag roof party. 
+                                </p>
+                            </div>
+                            <div class="social-link">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    
+                                    <div class="d-flex">
+                                        <a href="#">
+                                            Comments <span class="text-grey">(55)</span>
+                                        </a>
+                                        
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="multi-avatar">
+                                            <div class="avatar-xxs" style="background-image: url('/static/images/user.jpg');"></div>
+                                            <div class="avatar-xxs" style="background-image: url('/static/images/frank-busch-731193-unsplash.jpg');"></div>
+                                            <div class="avatar-xxs" style="background-image: url('/static/images/ilya-yakover-270303.jpg');"></div>
+                                            <div class="avatar-xxs more-people">+99</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comments">
+                                <div class="write-comment py-4">
+                                    <input type="text" name="" class="form-control input-rounded" placeholder="Say something...">
+                                </div>
+                                <div class="comment-byuser pmd">
+                                    <div class="card-byuser d-flex align-items-start justify-content-between">
+                                <div class="d-flex align-items-start">
+                                    <div class="avatar-sm" style="background-image: url('/static/images/user.jpg');"></div>
+                                    <div class="pl-sm">
+                                        <a href="#">Sabrina Carpenter</a>
+                                        <small class="text-grey d-block">3 hours ago</small>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fal fa-ellipsis-v text-grey"></i>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a href="" class="dropdown-item">Edit</a>
+                                        <a href="" class="dropdown-item">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content py-3">
+                                <p>
+                                    Lorem ipsum dolor amet tattooed listicle bitters, gochujang tote bag kale chips humblebrag roof party. 
+                                </p>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card mb-5 pmd">
+                            <div class="card-byuser d-flex align-items-start justify-content-between">
+                                <div class="d-flex align-items-start">
+                                    <div class="avatar-sm" style="background-image: url('/static/images/user.jpg');"></div>
+                                    <div class="pl-sm">
+                                        <a href="#">Sabrina Carpenter</a>
+                                        <small class="text-grey d-block">3 hours ago</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <a href="" class="mr-4 text-grey">
+                                          <i class="far fa-share-alt"></i>
+                                    </a>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fal fa-ellipsis-v text-grey"></i>
+                                        </a>
+                                        <div class="dropdown-menu">
+                                            <a href="" class="dropdown-item">Edit</a>
+                                            <a href="" class="dropdown-item">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content py-4">
+                                <p class="card-caption">
+                                    Lorem ipsum dolor amet tattooed listicle bitters, gochujang tote bag kale chips humblebrag roof party. 
+                                </p>
+                            </div>
+                            <div class="social-link">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    
+                                    <div class="d-flex">
+                                        <a href="#">
+                                            Comments <span class="text-grey">(55)</span>
+                                        </a>
+                                        
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="multi-avatar">
+                                            <div class="avatar-xxs" style="background-image: url('/static/images/user.jpg');"></div>
+                                            <div class="avatar-xxs" style="background-image: url('/static/images/frank-busch-731193-unsplash.jpg');"></div>
+                                            <div class="avatar-xxs" style="background-image: url('/static/images/ilya-yakover-270303.jpg');"></div>
+                                            <div class="avatar-xxs more-people">+99</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comments">
+                                <div class="write-comment py-4">
+                                    <input type="text" name="" class="form-control input-rounded" placeholder="Say something...">
+                                </div>
+                                <div class="comment-byuser pmd">
+                                    <div class="card-byuser d-flex align-items-start justify-content-between">
+                                <div class="d-flex align-items-start">
+                                    <div class="avatar-sm" style="background-image: url('/static/images/user.jpg');"></div>
+                                    <div class="pl-sm">
+                                        <a href="#">Sabrina Carpenter</a>
+                                        <small class="text-grey d-block">3 hours ago</small>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fal fa-ellipsis-v text-grey"></i>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a href="" class="dropdown-item">Edit</a>
+                                        <a href="" class="dropdown-item">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content py-3">
+                                <p>
+                                   Lorem ipsum dolor sit amet. 
+                                </p>
+                                <a href="">Write a reply</a>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
 
-  <div class="row">
-    <article class="col-md-8">
-      
-      <section class="featured">
-        <h3 class="pretty mb-3">Editor's Choice</h3>
-
-        <div class="d-flex flex-column">
-          <div class="image" style="background-image: url(/static/images/books/02@2x.png)">
-            <div class="rating">
-              <i class="fa fa-star filled"></i>
-              <i class="fa fa-star filled"></i>
-              <i class="fa fa-star filled"></i>
-              <i class="fa fa-star filled"></i>
-              <i class="fa fa-star"></i>
-              <span class="count">4.0</span>
-            </div>
-          </div>
-          <div class="body">
-            <div class="author my-3">by <a href="" prevdefault>Sarah Taylor</a></div>
-            <h5 class="mb-1">A Gentleman in Moscow: A Novel</h5>
-            <p class="mb-4">From the New York Times bestselling author of Rules of Civility—a transporting novel about a man.</p>
-          </div>
+                </ul>
+            </section>
         </div>
-      </section>
-
-      <section class="recent">
-        <div class="d-flex align-items-center justify-content-between mb-4">
-          <h3>Recent Reads</h3>
-
-          <div class="prevnext">
-            <a href="" class="mr-2"><i class="fal fa-chevron-left"></i></a>
-            <a href="" class="ml-2"><i class="fal fa-chevron-right"></i></a>
-          </div>
-        </div>
-
-        <div class="d-flex mb-4">
-
-          <div class="media" *ngFor="let read of recent">
-            <div class="image mr-2" [ngStyle]="{'background-image': 'url('+ read.book.cover +')'}"></div>
-            <div class="media-body d-flex flex-column">
-              <h5 class="mt-0">{{ read.book.title }}</h5>
-              <div>by <a href="">{{ read.book.author.display_name }}</a></div>
-              <span>{{ read.timeago }}</span>
-              <a href="">continue reading</a>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section class="release">
-        <div class="d-flex align-items-center justify-content-between mb-4">
-          <h3>New Releases</h3>
-
-          <a href="">See all <i class="fal fa-chevron-right"></i></a>
-        </div>
-
-        <div class="d-flex mb-4">
-
-          <div class="media" *ngFor="let book of releases">
-            <div class="image mr-2" [ngStyle]="{'background-image': 'url(' + book.cover + ')'}"></div>
-            <div class="media-body d-flex flex-column">
-              <h5 class="mt-0">{{ book.title }}</h5>
-              <p>{{ book.short_description }}</p>
-              <div>by <a href="">{{ book.author.display_name }}</a></div>
-              <div class="rating">
-                <i class="fa fa-star" *ratings="book.ratings"></i>
-                <span class="count">4.0</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </section>
-
-      <section class="trending">
-        <div class="d-flex align-items-center justify-content-between mb-4">
-          <h3>Trending</h3>
-
-          <a href="">See all <i class="fal fa-chevron-right"></i></a>
-        </div>
-
-        <div class="d-flex mb-4">
-
-          <div class="media">
-            <div class="image mr-2" style="background-image: url(/static/images/books/rae-tian-502320@2x.png)"></div>
-            <div class="media-body">
-              <h5>The Flying Exhibition</h5>
-              <div>by <a href="">J.K. Rowling</a></div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-    </article>
-
-    <aside class="col-md-4">
-      asdsada
-    </aside>
-  </div>
-
-</main>
+    </div>
+</div>

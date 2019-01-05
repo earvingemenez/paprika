@@ -1,0 +1,6 @@
+input {
+	border-color:$pale-grey;
+    &.input-rounded {
+        border-radius: 50px;
+    }
+}

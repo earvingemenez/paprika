@@ -1,0 +1,36 @@
+<nav class="navbar navbar-light bg-light">
+
+  <ul class="navbar-nav flex-row">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Explore</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Market</a>
+    </li>
+  </ul>
+
+  <a class="navbar-brand" href="#">Basaha</a>
+
+  <ul class="navbar-nav flex-row">
+    <li class="nav-item">
+      <a class="nav-link" prevdefault href=""><i class="fal fa-bell"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" prevdefault href=""><i class="fal fa-inbox"></i></a>
+    </li>
+    <li class="nav-item">
+      <div ngbDropdown>
+        <a ngbDropdownToggle prevdefault href="">{{ auth.user.first_name }}</a>
+        <div ngbDropdownMenu>
+          <a uiSref="profile" [uiParams]="{'handle': auth.user.handle}" class="dropdown-item">Profile</a>
+          <a href="#" prevdefault class="dropdown-item">Account Settings</a>
+          <a uiSref="signout" class="dropdown-item">Sign Out</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</nav>

@@ -1,0 +1,32 @@
+.post-with-cover{
+	
+	.card{
+		margin-top: -#{torem(120)};
+		margin-left: 2rem;
+		margin-right: 2rem;
+		  box-shadow: 0 3px 30px 0 rgba(219, 230, 230, 0.42);
+		.card-byuser{
+			margin-top: -#{torem(20)};
+			 #{$avatar}{ 
+				margin-top: -#{torem(30)};
+				border:solid 4px $white ;
+			}
+		}
+	}
+}
+
+.card-post{
+	.card{
+		box-shadow: 0 3px 30px 0 rgba(92, 102, 128, 0.16);
+	}
+	p{
+		color: $blue-grey;
+	}
+	
+	.social-share{
+		a{
+			font-size: torem(13);
+			font-family: $SF-UI-Display-Regular;
+		}
+	}
+}

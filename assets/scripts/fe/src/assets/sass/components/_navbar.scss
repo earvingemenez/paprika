@@ -1,0 +1,96 @@
+.nav-wrapper {
+    padding: 20px $m36;
+
+    nav {
+        &#mainNav {
+            // padding-left: $m36;
+            // padding-right: $m36;
+
+            .btn-cta {
+                width: 150px;
+                height: 46px;
+                border-radius: 4px;
+                background-color: #2dccc7;
+                color: $white;
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(center);
+                padding:0;
+            }
+
+            ul {
+                li {
+                    &.account-opt {
+                        a {
+                            font-size: $paragraph;
+                            font-family:$sf-ui-display-semibold;
+
+                            .avatar-xs {
+                                margin-right: 0.5rem;
+                            }
+
+                            span {
+                                font-size: $paragraph;
+                                font-family:$sf-ui-display-semibold;
+                            }
+
+                            i {
+                                color: $blue-grey;
+                            }
+                        }
+                    }
+
+                    a {
+                        position: relative;
+                        font-size: $paragraph;
+
+                        &.nav-link {
+                            font-family: $sf-ui-display-semibold;
+
+                            padding-left: 1rem;
+                            padding-right: 1rem;
+
+                        }
+
+                        &.notif {
+                            span {
+                                position: relative;
+
+                                &:after {
+                                    content: "";
+                                    width: 6px;
+                                    height: 6px;
+                                    background-color: $sky-blue;
+                                    display: block;
+                                    border-radius: 50%;
+                                    position: absolute;
+                                    right: -6px;
+                                    top: 2px;
+                                }
+                            }
+                        }
+
+                    }
+
+                    &:first-child {
+                        a {
+                            padding-left: 0;
+                        }
+                    }
+
+                    &:last-child {
+                        a {
+                            padding-right: 0;
+                        }
+                    }
+
+                }
+            }
+
+            form {
+                width: 40%;
+                margin-left: 2rem;
+            }
+        }
+    }
+}

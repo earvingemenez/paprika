@@ -1,0 +1,91 @@
+//typography variables
+
+
+
+$sf-ui-display-medium: 'sf-ui-display-medium';
+$sf-ui-display-bold: 'sf-ui-display-bold';
+$sf-ui-display-heavy: 'sf-ui-display-heavy';
+$sf-ui-display-black: 'sf-ui-display-black';
+$sf-ui-display-semibold: 'sf-ui-display-semibold';
+$SF-UI-Display-Regular: 'SF-UI-Display-Regular';
+$sf-ui-display-ultralight: 'sf-ui-display-ultralight';
+$sf-ui-display-thin: 'sf-ui-display-thin';
+$sf-ui-display-light: 'sf-ui-display-light';
+
+$BaskervilleBoldItalicBT: 'BaskervilleBoldItalicBT';
+$BaskervilleBoldBT: 'BaskervilleBoldBT';
+$BaskervilleBT: 'BaskervilleBT';
+$BaskervilleItalicBT: 'BaskervilleItalicBT';
+$BASKE10: 'BASKE10';
+$baskvl: 'baskvl';
+$baskerville-bold-bt: 'baskerville bold bt';
+$Baskerville-Bold: 'Baskerville Bold font';
+$baskervi: 'baskervi';
+$BASKRV_L: 'BASKRV_L';
+$BASKE1: 'BASKE1';
+$BASKE9: 'BASKE9';
+
+//Primary colors
+
+$white: #ffffff ;
+$primary:#00807c;
+$sky-blue: #00c7f7;
+$maize: #ffd23b;
+$black: #000;
+
+//greys
+$charcoal-grey: #383f4a;
+$dark-grey: #171717;
+$default: #7f858d;
+$light-grey: #a3aebe;
+$pale-grey: #f5f7fc;
+$blue-grey: #7e8c9a;
+$cloud:#b7bbc7;
+$pale-grey-two:#f5f7fc;
+
+
+
+
+// Mood Colors
+
+// $success: #45e0aa;
+// $danger: #e04551;
+ $warning: #ff9e50;
+// $info: #4a73fa;
+
+
+//secondary colors
+
+
+
+
+//font-sizes:
+$basefont: 14;
+$h1: #{72 / $basefont}rem;
+$h2: #{56 / $basefont}rem;
+$h3: #{32 / $basefont}rem;
+$h4: #{24 / $basefont}rem;
+$h5: #{20 / $basefont}rem;
+$h6: #{18 / $basefont}rem;
+$p-md: #{16 / $basefont}rem;
+$paragraph: #{14 / $basefont}rem;
+$small: #{12 / $basefont}rem;
+
+
+//margin sizes
+$m36: 36px;
+$m32: 32px;
+$m24: 24px;
+$m16: 16px;
+$m12: 12px;
+$m8: 8px;
+
+
+
+$large-section-size: #{808 / $basefont}rem;
+
+
+
+//to call wildcards at once
+
+$avatar:  '[class*="avatar-"]';
